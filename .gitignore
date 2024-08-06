@@ -1,0 +1,42 @@
+# For references, see our code standard documentation
+
+.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace
+xcuserdata
+DerivedData/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+/.swiftpm/
+Package.resolved
+
+# App Distribution
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# User-specific files
+*.moved-aside
+*.xcuserstate
+*.xcworkspace
+
+# Swift build artifacts
+.build/
+DerivedData/
+.build/
+/.build/
+Packages/
+Package.pins
+Package.resolved
+.swift-version
+.swiftmodule/
