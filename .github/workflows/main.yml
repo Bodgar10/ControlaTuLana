@@ -21,9 +21,6 @@ jobs:
         with:
           xcode-version: '15.2'  # Especifica la versión de Xcode que deseas usar
 
-      - name: Install dependencies
-        run: swift package resolve
-
       - name: Build app
         run: xcodebuild -scheme ControlaTuLana -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' build
 
