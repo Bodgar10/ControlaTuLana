@@ -23,10 +23,8 @@ jobs:
 
       - name: Build app
         run: |
-          cd DesignSystem
           xcodebuild -scheme ControlaTuLana -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' build -allowProvisioningUpdates
 
       - name: Run tests
         run: |
-          cd DesignSystem
           xcodebuild -scheme ControlaTuLana -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' test -allowProvisioningUpdates
