@@ -7,12 +7,15 @@
 
 import SwiftUI
 import SwiftData
+import CashSwitchboard
+import Common
 
 @main
 struct ControlaTuLanaApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            CashSwitchboard.Transaction.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -28,5 +31,15 @@ struct ControlaTuLanaApp: App {
             ContentView()
         }
         .modelContainer(sharedModelContainer)
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+    ) -> Bool {
+        ServiceLocator.register((any NavigationService).self, factory: MyCashNavigationService())
+        return true
     }
 }

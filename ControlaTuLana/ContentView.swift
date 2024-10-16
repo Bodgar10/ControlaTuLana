@@ -7,49 +7,32 @@
 
 import SwiftUI
 import SwiftData
+import Balance
+import CashSwitchboard
+import Common
+import DesignSystem
+import HistoryBalance
+import CashInOut
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @ObservedObject var navigationService: MyCashNavigationService
+    
+    init() {
+        navigationService = ServiceLocator.get((any NavigationService).self) as!MyCashNavigationService
+    }
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        TabView {
+            BalanceCoordinator(modelContext: modelContext).start()
+                .tabItem {
+                    Label("Mi Balance", systemImage: "dollarsign.circle")
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+                .fullScreenCover(isPresented: $navigationService.isPresentingModal, content: {
+                    CashInOutCoordinator(modelContext: modelContext, type: navigationService.typeCashDestination ?? "").start()
+                })
+            HistoryCoordinator().start()
+                .tabItem {
+                    Label("Historial", systemImage: "chart.pie")
             }
         }
     }
@@ -57,5 +40,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: CashSwitchboard.Transaction.self, inMemory: true)
 }

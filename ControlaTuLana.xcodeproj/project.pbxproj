@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873A42132CBE057500B26996 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 873A42122CBE057500B26996 /* DesignSystem */; };
+		873A42162CBE057B00B26996 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 873A42152CBE057B00B26996 /* Common */; };
+		873A42192CBE058200B26996 /* CashSwitchboard in Frameworks */ = {isa = PBXBuildFile; productRef = 873A42182CBE058200B26996 /* CashSwitchboard */; };
+		873A421C2CBE058A00B26996 /* Balance in Frameworks */ = {isa = PBXBuildFile; productRef = 873A421B2CBE058A00B26996 /* Balance */; };
+		873A421F2CBE059C00B26996 /* HistoryBalance in Frameworks */ = {isa = PBXBuildFile; productRef = 873A421E2CBE059C00B26996 /* HistoryBalance */; };
+		873A42232CBE075200B26996 /* CashInOut in Frameworks */ = {isa = PBXBuildFile; productRef = 873A42222CBE075200B26996 /* CashInOut */; };
+		873A42252CBE087A00B26996 /* MyCashNavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A42242CBE087A00B26996 /* MyCashNavigationService.swift */; };
 		87615C512C62A926007BA165 /* ControlaTuLanaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87615C502C62A926007BA165 /* ControlaTuLanaApp.swift */; };
 		87615C532C62A926007BA165 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87615C522C62A926007BA165 /* ContentView.swift */; };
-		87615C552C62A926007BA165 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87615C542C62A926007BA165 /* Item.swift */; };
 		87615C572C62A927007BA165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87615C562C62A927007BA165 /* Assets.xcassets */; };
 		87615C5A2C62A927007BA165 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87615C592C62A927007BA165 /* Preview Assets.xcassets */; };
 		87615C642C62A928007BA165 /* ControlaTuLanaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87615C632C62A928007BA165 /* ControlaTuLanaTests.swift */; };
@@ -35,10 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		873A42242CBE087A00B26996 /* MyCashNavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCashNavigationService.swift; sourceTree = "<group>"; };
 		87615C4D2C62A926007BA165 /* ControlaTuLana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlaTuLana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87615C502C62A926007BA165 /* ControlaTuLanaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlaTuLanaApp.swift; sourceTree = "<group>"; };
 		87615C522C62A926007BA165 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		87615C542C62A926007BA165 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		87615C562C62A927007BA165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87615C592C62A927007BA165 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		87615C5F2C62A928007BA165 /* ControlaTuLanaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlaTuLanaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +59,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873A42132CBE057500B26996 /* DesignSystem in Frameworks */,
+				873A421F2CBE059C00B26996 /* HistoryBalance in Frameworks */,
+				873A421C2CBE058A00B26996 /* Balance in Frameworks */,
+				873A42162CBE057B00B26996 /* Common in Frameworks */,
+				873A42192CBE058200B26996 /* CashSwitchboard in Frameworks */,
+				873A42232CBE075200B26996 /* CashInOut in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +110,9 @@
 			children = (
 				87615C502C62A926007BA165 /* ControlaTuLanaApp.swift */,
 				87615C522C62A926007BA165 /* ContentView.swift */,
-				87615C542C62A926007BA165 /* Item.swift */,
 				87615C562C62A927007BA165 /* Assets.xcassets */,
 				87615C582C62A927007BA165 /* Preview Content */,
+				873A42242CBE087A00B26996 /* MyCashNavigationService.swift */,
 			);
 			path = ControlaTuLana;
 			sourceTree = "<group>";
@@ -146,6 +158,14 @@
 			dependencies = (
 			);
 			name = ControlaTuLana;
+			packageProductDependencies = (
+				873A42122CBE057500B26996 /* DesignSystem */,
+				873A42152CBE057B00B26996 /* Common */,
+				873A42182CBE058200B26996 /* CashSwitchboard */,
+				873A421B2CBE058A00B26996 /* Balance */,
+				873A421E2CBE059C00B26996 /* HistoryBalance */,
+				873A42222CBE075200B26996 /* CashInOut */,
+			);
 			productName = ControlaTuLana;
 			productReference = 87615C4D2C62A926007BA165 /* ControlaTuLana.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +238,14 @@
 				Base,
 			);
 			mainGroup = 87615C442C62A926007BA165;
+			packageReferences = (
+				873A42112CBE057500B26996 /* XCRemoteSwiftPackageReference "DesignSystem" */,
+				873A42142CBE057B00B26996 /* XCRemoteSwiftPackageReference "Common" */,
+				873A42172CBE058200B26996 /* XCRemoteSwiftPackageReference "CashSwitchboard" */,
+				873A421A2CBE058A00B26996 /* XCRemoteSwiftPackageReference "Balance" */,
+				873A421D2CBE059C00B26996 /* XCRemoteSwiftPackageReference "HistoryBalance" */,
+				873A42212CBE075200B26996 /* XCRemoteSwiftPackageReference "CashInOut" */,
+			);
 			productRefGroup = 87615C4E2C62A926007BA165 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87615C532C62A926007BA165 /* ContentView.swift in Sources */,
-				87615C552C62A926007BA165 /* Item.swift in Sources */,
+				873A42252CBE087A00B26996 /* MyCashNavigationService.swift in Sources */,
 				87615C512C62A926007BA165 /* ControlaTuLanaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +614,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		873A42112CBE057500B26996 /* XCRemoteSwiftPackageReference "DesignSystem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bodgar10/DesignSystem.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+		873A42142CBE057B00B26996 /* XCRemoteSwiftPackageReference "Common" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bodgar10/Common.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+		873A42172CBE058200B26996 /* XCRemoteSwiftPackageReference "CashSwitchboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bodgar10/CashSwitchboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+		873A421A2CBE058A00B26996 /* XCRemoteSwiftPackageReference "Balance" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bodgar10/Balance.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		873A421D2CBE059C00B26996 /* XCRemoteSwiftPackageReference "HistoryBalance" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bodgar10/HistoryBalance.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		873A42212CBE075200B26996 /* XCRemoteSwiftPackageReference "CashInOut" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bodgar10/CashInOut.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		873A42122CBE057500B26996 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 873A42112CBE057500B26996 /* XCRemoteSwiftPackageReference "DesignSystem" */;
+			productName = DesignSystem;
+		};
+		873A42152CBE057B00B26996 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 873A42142CBE057B00B26996 /* XCRemoteSwiftPackageReference "Common" */;
+			productName = Common;
+		};
+		873A42182CBE058200B26996 /* CashSwitchboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 873A42172CBE058200B26996 /* XCRemoteSwiftPackageReference "CashSwitchboard" */;
+			productName = CashSwitchboard;
+		};
+		873A421B2CBE058A00B26996 /* Balance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 873A421A2CBE058A00B26996 /* XCRemoteSwiftPackageReference "Balance" */;
+			productName = Balance;
+		};
+		873A421E2CBE059C00B26996 /* HistoryBalance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 873A421D2CBE059C00B26996 /* XCRemoteSwiftPackageReference "HistoryBalance" */;
+			productName = HistoryBalance;
+		};
+		873A42222CBE075200B26996 /* CashInOut */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 873A42212CBE075200B26996 /* XCRemoteSwiftPackageReference "CashInOut" */;
+			productName = CashInOut;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87615C452C62A926007BA165 /* Project object */;
 }
